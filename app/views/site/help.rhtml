@@ -1,0 +1,46 @@
+<h1>Help</h1>
+
+<h2>How To Babble-ify Your Rails App</h2>
+
+<ol>
+
+  <li>Freeze Rails.
+<pre>
+% rake rails:freeze:gems
+</pre>
+  This puts a copy of Rails inside your application, in the
+  <code>vendor/rails</code> directory.</li>
+
+  <li>Create the file <code>_init.rb</code> in the root directory of your Rails
+  app:
+
+<pre>
+# Look for the requested URI in the public directory. If not found, pass it on
+# to the 10gen Rails dispatcher.
+$mapUrlToJxpFile = Proc.new do |uri, req|
+  uri = '/index.html' if uri == '/'
+  if File.exist?(File.join($local.getRoot.getPath, 'public', uri[1..-1]))
+    "/public" + uri
+  else
+    "public/xgen_dispatch.rb"
+  end
+end
+</pre>
+  </li>
+
+
+  <li>Create the file <code>public/xgen_dispatch.rb</code>:
+
+<pre>
+require 'xgen/rails'
+load 'xgen/cgi_env.rb'
+Dispatcher.dispatch
+</pre>
+  </li>
+
+</ol>
+  
+<h2>How To Run Your Rails App</h2>
+
+<p><a href="http://www.10gen.com/wiki/SDK">Download</a> the 10gen SDK, then see
+the <a href="http://www.10gen.com/wiki/SDK.QuickStart">Quick Start</a> guide</p>.

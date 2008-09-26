@@ -1,0 +1,21 @@
+<h1>Course Editor</h1>
+
+<% form_tag({:action => 'save'}) do %>
+<table>
+<tr>
+  <td><label for="name">Name</label>:</td>
+  <td><input type="text" name="name" value="<%= @course.name %>", size=60/></td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>&nbsp;</td>
+  <td>
+    <input type="submit" value="Save"/>
+    <%= link_to 'Cancel', :action => 'list' %>
+  </td>
+</table>
+<input type="hidden" name="id" value="<%= @course.id %>"/>
+<% end %>

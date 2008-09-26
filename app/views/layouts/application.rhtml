@@ -1,0 +1,42 @@
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title><%= h(@page_title || 'Ruby on Rails on Babble') %></title>
+  <%= stylesheet_link_tag "site" %>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+<div id="headerback">
+  <div id="container">
+    <div id="logo">
+      <div>
+        <%= link_to_unless_current(image_tag('logo10gen.gif', :size => '120x60', :border => 0),
+                                   :controller => 'site', :action => 'index') %>
+      </div>
+    </div>
+    <div id="nav">
+      <ul>
+        <li><%= link_to 'courses', :controller => 'course', :action => 'list' %></li>
+        <li><%= link_to 'students', :controller => 'student', :action => 'list' %></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="stript">&nbsp;</div>
+
+<div id="maincontent">
+  <%= @content_for_layout %>
+</div>
+
+<div id="footer">
+    <%= link_to "About", :controller => "site", :action => "about" %>
+  | <%= link_to "Help", :controller => "site", :action => "help" %>
+
+  <p>Copyright &copy; 2008 <a href="http://www.10gen.com/">10gen</a></p>
+</div>
+
+</body>
+</html>

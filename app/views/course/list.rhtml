@@ -1,0 +1,17 @@
+<h1>Course List</h1>
+
+<p><%= link_to 'Create', :action => 'create' %> a new course.</p>
+
+<table>
+<tr style="background-color:black; color:white">
+  <th>ID</th>
+  <th>Name</th><th>&nbsp;</th>
+</tr>
+<% @courses.each do |course| %>
+<tr>
+  <td><%= course.id %></td>
+  <td><%= h course.name %></td>
+  <td><%= link_to 'Edit', :action => :edit, :id => course %></td>
+</tr>
+<% end %>
+</table>
