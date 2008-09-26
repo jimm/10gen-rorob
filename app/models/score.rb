@@ -1,5 +1,7 @@
 class Score
 
+  attr_accessor :for_course, :grade
+
   def initialize(course, grade)
     @for_course, @grade = course, grade
   end

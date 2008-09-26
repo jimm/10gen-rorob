@@ -1,5 +1,7 @@
 class Address
 
+  attr_accessor :street, :city, :state, :postal_code
+
   def initialize(street="", city="", state="", postal_code="")
     @street, @city, @state, @postal_code = street, city, state, postal_code
   end

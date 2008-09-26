@@ -15,7 +15,7 @@ class Student < XGen::Mongo::Base
 EOS
   end
 
-  def add_Score(course, grad)
+  def add_score(course, grad)
     @scores << Score.new(course, grade)
   end
 end

@@ -1,2 +1,24 @@
-<h1>Student#list</h1>
-<p>Find me in app/views/student/list.rhtml</p>
+<h1>Student List</h1>
+
+<p><%= link_to 'Create', :action => 'create' %> a new student.</p>
+
+<table>
+<tr style="background-color:black; color:white">
+  <th>ID</th>
+  <th>Name</th>
+  <th>Email</th>
+  <th>Address</th>
+  <th>Scores</th>
+  <th>&nbsp;</th>
+</tr>
+<% @students.each do |student| %>
+<tr>
+  <td><%= student.id %></td>
+  <td><%= h student.name %></td>
+  <td><a href="mailto:<%= student.email %>"><%= student.email %></a></td>
+  <td><%= h(student.address.to_s).gsub(/\n/, "<br/>") %></td>
+  <td><%= h(student.scores.join("\n")).gsub(/\n/, "<br/>") %></td>
+  <td><%= link_to 'Edit', :action => :edit, :id => student %></td>
+</tr>
+<% end %>
+</table>
