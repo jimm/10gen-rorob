@@ -1,7 +1,8 @@
 == About Ruby on Rails on Babble
 
-This is a sample Rails application that runs on 10gen's babble app server and
-uses its mongo object-oriented database.
+This is a sample Rails application that runs on 10gen's Babble app server and
+uses their Mongo object-oriented database.
+
 
 == How To Babble-ify Your Rails App
 
@@ -31,8 +32,24 @@ uses its mongo object-oriented database.
         load 'xgen/cgi_env.rb'
         Dispatcher.dispatch
 
+4. Use XGen::Mongo::Base instead of ActiveRecord::Base
+
+        class Course < XGen::Mongo::Base
+
+          # Declare Mongo collection name and ivars to be saved
+          set_collection :courses, %w(name)
+
+          def to_s
+            "Course #{name}"
+          end
+        end
+
 
 == How To Run Your Rails App
 
 Download the 10gen SDK (http://www.10gen.com/wiki/SDK), then see the Quick
 Start guide (http://www.10gen.com/wiki/SDK.QuickStart).
+
+# Local Variables:
+# mode: rdoc
+# End:

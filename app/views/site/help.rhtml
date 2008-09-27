@@ -38,6 +38,22 @@ Dispatcher.dispatch
 </pre>
   </li>
 
+  <li>Use <code>XGen::Mongo::Base</code> instead of
+  <code>ActiveRecord::Base</code>
+
+<pre>
+class Course &lt; XGen::Mongo::Base
+
+  # Declare Mongo collection name and ivars to be saved
+  set_collection :courses, %w(name)
+
+  def to_s
+    "Course #{name}"
+  end
+end
+</pre>
+  </li>
+
 </ol>
   
 <h2>How To Run Your Rails App</h2>
