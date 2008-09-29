@@ -29,7 +29,7 @@ uses their Mongo object-oriented database.
 3. Create the file public/xgen_dispatch.rb:
 
         require 'xgen/rails'
-        load 'xgen/cgi_env.rb'
+        load 'xgen/rails/cgi_env.rb'
         Dispatcher.dispatch
 
 4. Use XGen::Mongo::Base instead of ActiveRecord::Base

@@ -1,3 +1,3 @@
 require 'xgen/rails'
-load 'xgen/cgi_env.rb'
+load 'xgen/rails/cgi_env.rb'
 Dispatcher.dispatch
