@@ -4,14 +4,15 @@
 
 <table>
 <tr style="background-color:black; color:white">
-  <th>ID</th>
   <th>Name</th><th>&nbsp;</th>
 </tr>
 <% @courses.each do |course| %>
 <tr>
-  <td><%= course.id %></td>
   <td><%= h course.name %></td>
-  <td><%= link_to 'Edit', :action => :edit, :id => course %></td>
+  <td>
+    <%= link_to 'Edit', :action => :edit, :id => course %>
+    <%= link_to 'Delete', :action => :delete, :id => course %>
+  </td>
 </tr>
 <% end %>
 </table>

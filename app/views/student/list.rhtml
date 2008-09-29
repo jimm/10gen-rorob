@@ -4,7 +4,6 @@
 
 <table>
 <tr style="background-color:black; color:white">
-  <th>ID</th>
   <th>Name</th>
   <th>Email</th>
   <th>Address</th>
@@ -13,12 +12,14 @@
 </tr>
 <% @students.each do |student| %>
 <tr>
-  <td><%= student.id %></td>
   <td><%= h student.name %></td>
   <td><a href="mailto:<%= student.email %>"><%= student.email %></a></td>
   <td><%= h(student.address.to_s).gsub(/\n/, "<br/>") %></td>
   <td><%= h(student.scores.join("\n")).gsub(/\n/, "<br/>") %></td>
-  <td><%= link_to 'Edit', :action => :edit, :id => student %></td>
+  <td>
+	<%= link_to 'Edit', :action => :edit, :id => student %>
+    <%= link_to 'Delete', :action => :delete, :id => student %>
+  </td>
 </tr>
 <% end %>
 </table>

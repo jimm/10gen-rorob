@@ -463,4 +463,5 @@ p.login {
 table th {
 	background-color: #103682;
 	color: white;
+        padding: 0.25em;
 }

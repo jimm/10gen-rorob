@@ -18,4 +18,9 @@ class CourseController < ApplicationController
     @course.save
     redirect_to :action => 'list'
   end
+
+  def delete
+    Course.delete(params[:id])
+    redirect_to :action => 'list'
+  end
 end
