@@ -3,14 +3,14 @@
 <p><%= link_to 'Create', :action => 'create' %> a new course.</p>
 
 <table>
-<tr style="background-color:black; color:white">
+<tr>
   <th>Name</th><th>&nbsp;</th>
 </tr>
 <% @courses.each do |course| %>
 <tr>
   <td><%= h course.name %></td>
   <td>
-    <%= link_to 'Edit', :action => :edit, :id => course %>
+    <%= link_to 'Edit', :action => :edit, :id => course.id %>
     <%= link_to 'Delete', :action => :delete, :id => course %>
   </td>
 </tr>

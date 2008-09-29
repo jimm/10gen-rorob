@@ -3,7 +3,7 @@
 <p><%= link_to 'Create', :action => 'create' %> a new student.</p>
 
 <table>
-<tr style="background-color:black; color:white">
+<tr>
   <th>Name</th>
   <th>Email</th>
   <th>Address</th>
@@ -17,7 +17,7 @@
   <td><%= h(student.address.to_s).gsub(/\n/, "<br/>") %></td>
   <td><%= h(student.scores.join("\n")).gsub(/\n/, "<br/>") %></td>
   <td>
-	<%= link_to 'Edit', :action => :edit, :id => student %>
+    <%= link_to 'Edit', :action => :edit, :id => student.id %>
     <%= link_to 'Delete', :action => :delete, :id => student %>
   </td>
 </tr>
