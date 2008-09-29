@@ -1,5 +1,7 @@
 class Student < XGen::Mongo::Base
-  set_collection :students, %w(name email address scores)
+
+  collection_name :students
+  fields :name, :email, :address, :scores
 
   def initialize(row=nil)
     super
