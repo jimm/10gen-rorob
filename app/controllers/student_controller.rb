@@ -1,7 +1,7 @@
 class StudentController < ApplicationController
 
   def list
-    @students = Student.find(:all)
+    @students = Student.find(:all, :order => :name)
   end
 
   def create

@@ -1,7 +1,7 @@
 class CourseController < ApplicationController
 
   def list
-    @courses = Course.find(:all)
+    @courses = Course.find(:all, :order => :name)
   end
 
   def create
