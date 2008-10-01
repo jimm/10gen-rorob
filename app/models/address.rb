@@ -1,10 +1,6 @@
-class Address
+class Address < XGen::Mongo::Base
 
-  attr_accessor :street, :city, :state, :postal_code
-
-  def initialize(street="", city="", state="", postal_code="")
-    @street, @city, @state, @postal_code = street, city, state, postal_code
-  end
+  fields :street, :city, :state, :postal_code
 
   def to_s
     "#{street}\n#{city}, #{state} #{postal_code}"

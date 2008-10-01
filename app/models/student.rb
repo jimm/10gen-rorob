@@ -1,12 +1,13 @@
 class Student < XGen::Mongo::Base
 
   collection_name :students
-  fields :name, :email, :address, :scores
+  fields :name, :email
+  has_one :address
+  has_many :scores, :class_name => "Score"
 
   def initialize(row=nil)
     super
-    @scores = []
-    @address = Address.new
+    @address ||= Address.new
   end
 
   def summary

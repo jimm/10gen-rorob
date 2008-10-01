@@ -1,10 +1,10 @@
-== About Ruby on Rails on Babble
+= About Ruby on Rails on Babble
 
 This is a sample Rails application that runs on 10gen's Babble app server and
 uses their Mongo object-oriented database.
 
 
-== How To Babble-ify Your Rails App
+= How To Babble-ify Your Rails App
 
 1. Freeze Rails.
 
@@ -45,12 +45,15 @@ uses their Mongo object-oriented database.
           end
         end
 
+   See the classes in app/models for more samples.
 
-== How To Run Your Rails App
+
+= How To Run Your Rails App
 
 Download the 10gen SDK (http://www.10gen.com/wiki/SDK), then see the Quick
 Start guide (http://www.10gen.com/wiki/SDK.QuickStart).
 
+#--
 # Local Variables:
 # mode: rdoc
 # End:

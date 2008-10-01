@@ -1,10 +1,6 @@
-class Score
+class Score < XGen::Mongo::Base
 
-  attr_accessor :for_course, :grade
-
-  def initialize(course, grade)
-    @for_course, @grade = course, grade
-  end
+  fields :for_course, :grade
 
   def passed?
     @grade >= 2.0
