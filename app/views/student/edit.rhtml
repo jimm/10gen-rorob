@@ -1,26 +1,37 @@
 <h1>Student Editor</h1>
 
+<%
+# This could be in a helper, of course.
+def field_row(obj, field, options={})
+  size = options[:size] || 40
+  str = <<EOS
+<tr>
+  <td><label for="#{field}">#{field.gsub(/_/, ' ').capitalize}</label>:</td>
+  <td><input type="text" name="#{field}" value="#{obj.instance_variable_get('@'+field)}", size=#{size}/></td>
+</tr>
+EOS
+  str
+end
+def blank_row
+  "<tr><td>&nbsp;</td><td>&nbsp;</td></tr>"
+end
+%>
+
 <% form_tag({:action => 'save'}) do %>
 <table>
+<%= field_row(@student, 'name') %>
+<%= field_row(@student, 'email') %>
+<%= blank_row %>
 <tr>
-  <td><label for="name">Name</label>:</td>
-  <td><input type="text" name="name" value="<%= @student.name %>", size=60/></td>
-</tr>
-<tr>
-  <td><label for="email">Email</label>:</td>
-  <td><input type="text" name="email" value="<%= @student.email %>", size=60/></td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-  <td><em>To do: address and grade</em></td>
-</tr>
-<tr>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
+  <td><label>Address</label>:</td>
+  <td>
+    <table>
+    <%= field_row(@student.address, 'street') %>
+    <%= field_row(@student.address, 'city') %>
+    <%= field_row(@student.address, 'state') %>
+    <%= field_row(@student.address, 'postal_code', :size => 12) %>
+    </table>
+  </td>
 </tr>
 <tr>
   <td>&nbsp;</td>
@@ -30,4 +41,35 @@
   </td>
 </table>
 <input type="hidden" name="id" value="<%= @student.id %>"/>
+<% end %>
+
+<br/>
+<h2>Course Grades</h2>
+
+<table>
+<tr>
+  <th>Course</th>
+  <th>Grade</th>
+</tr>
+<% @student.scores.each do |score| %>
+<tr>
+  <td><%= score.for_course.name %></td>
+  <td><%= score.grade %>
+</tr>
+<% end %>
+</table>
+
+<br/>
+<p>Add a grade:</p>
+
+<% form_tag({:action => 'add_grade'}) do %>
+<%= select('course', 'course_id', @courses.collect {|c| [c.name, c.id]}) %>
+<select>
+  <option value="4.0">A
+  <option value="3.0">B
+  <option value="4.0">C
+  <option value="5.0">D
+</select>
+<input type="hidden" name="id" value="<%= @student.id %>"/>
+<input type="submit" value="Save"/>
 <% end %>
