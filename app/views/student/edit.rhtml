@@ -64,11 +64,11 @@ end
 
 <% form_tag({:action => 'add_grade'}) do %>
 <%= select('course', 'course_id', @courses.collect {|c| [c.name, c.id]}) %>
-<select>
-  <option value="4.0">A
-  <option value="3.0">B
-  <option value="4.0">C
-  <option value="5.0">D
+<select name="grade">
+  <option value="4.0">4.0
+  <option value="3.0">3.0
+  <option value="2.0">2.0
+  <option value="1.0">1.0
 </select>
 <input type="hidden" name="id" value="<%= @student.id %>"/>
 <input type="submit" value="Save"/>

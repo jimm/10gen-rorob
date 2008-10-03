@@ -22,7 +22,7 @@ class StudentController < ApplicationController
 
   def add_grade
     student = Student.find(params[:id])
-    student.add_score(params['course[course_id]'], params[:grade])
+    student.add_score(params['course']['course_id'], params[:grade].to_f)
     student.save
     redirect_to :action => 'edit', :id => student.id
   end
