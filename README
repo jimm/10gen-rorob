@@ -47,6 +47,11 @@ uses their Mongo object-oriented database.
 
    See the classes in app/models for more samples.
 
+5. Optional: don't load ActiveRecord. In config/environment.rb, inside the
+    Rails::Initializer block, add this line:
+
+        config.frameworks -= [ :active_record ]
+
 
 = How To Run Your Rails App
 
