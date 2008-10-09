@@ -55,6 +55,15 @@ end
 </pre>
   </li>
 
+  <li>Optional: don't load <code>ActiveRecord</code>. In
+    <code>config/environment.rb</code>, inside the
+    <code>Rails::Initializer</code> block, add this line:
+
+<pre>
+config.frameworks -= [ :active_record ]
+</pre>
+  </li>
+
 </ol>
   
 <h2>How To Run Your Rails App</h2>
