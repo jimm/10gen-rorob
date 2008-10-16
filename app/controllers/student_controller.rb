@@ -6,6 +6,7 @@ class StudentController < ApplicationController
 
   def create
     @student = Student.new
+    @courses = Course.find(:all)
     render :action => 'edit'
   end
 
