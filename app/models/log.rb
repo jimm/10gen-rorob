@@ -4,6 +4,10 @@ class Log < XGen::Mongo::Base
   collection_name "rails_log_#{ENV['RAILS_ENV']}"
   fields :time, :msg
 
+  def self.delete_all
+    Log.coll.drop()
+  end
+
   def time
     Time.at(@time)
   end
