@@ -5,6 +5,6 @@ $mapUrlToJxpFile = Proc.new do |uri, req|
   if File.exist?(File.join($local.getRoot.getPath, 'public', uri[1..-1]))
     "/public" + uri
   else
-    "public/xgen_dispatch.rb"
+    "public/xgen_dispatch.rbcgi"
   end
 end
