@@ -1,0 +1,13 @@
+<h1>Log Messages</h1>
+
+<table>
+<tr>
+  <th>Time</th><th>Message</th>
+</tr>
+<% @logs.each do |log| %>
+<tr>
+  <td style="width:30%"><%= log.time %></td>
+  <td style="width:70%"><%= h log.msg %></td>
+</tr>
+<% end %>
+</table>
