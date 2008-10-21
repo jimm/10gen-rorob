@@ -15,25 +15,15 @@
   app:
 
 <pre>
-# Look for the requested URI in the public directory. If not found, pass it on
-# to the 10gen Rails dispatcher.
-$mapUrlToJxpFile = Proc.new do |uri, req|
-  uri = '/index.html' if uri == '/'
-  if File.exist?(File.join($local.getRoot.getPath, 'public', uri[1..-1]))
-    "/public" + uri
-  else
-    "public/xgen_dispatch.rb"
-  end
-end
+require 'xgen/rails/init'
 </pre>
   </li>
 
 
-  <li>Create the file <code>public/xgen_dispatch.rb</code>:
+  <li>Create the file <code>public/xgen_dispatch.rbcgi</code>:
 
 <pre>
 require 'xgen/rails'
-load 'xgen/rails/cgi_env.rb'
 Dispatcher.dispatch
 </pre>
   </li>
