@@ -1,9 +1,10 @@
 class LogController < ApplicationController
 
   def list
-    @order = params[:order] || 'asc'
-    options = @order == 'desc' ? {:order => 'time desc'} : {}
+    order = params[:order] || 'asc'
+    options = order == 'desc' ? {:order => 'time desc'} : {}
     @logs = Log.find(:all, options)
+    @reverse_order = order == 'asc' ? 'desc' : 'asc'
   end
 
   def delete_all
