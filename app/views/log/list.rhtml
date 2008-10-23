@@ -10,7 +10,7 @@ saved after the old ones were deleted.</p>
 
 <table>
 <tr>
-  <th>Time</th><th>Message</th>
+  <th><%= link_to 'Time', {:action => 'list', :order => (@order == 'asc' ? 'desc' : 'asc')}, {:class => 'link' } %></th><th>Message</th>
 </tr>
 <% @logs.each do |log| %>
 <tr>

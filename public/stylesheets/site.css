@@ -465,3 +465,8 @@ table th {
 	color: white;
         padding: 0.25em;
 }
+th a.link, th a.link:visited {
+	color: white;
+        font-weight: bold;
+	text-decoration: underline;
+}
