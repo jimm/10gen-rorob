@@ -15,7 +15,7 @@ saved after the old ones were deleted.</p>
 <% @logs.each do |log| %>
 <tr>
   <td style="width:30%"><%= log.time %></td>
-  <td style="width:70%"><%= h log.msg %></td>
+  <td style="width:70%"><pre><%= h log.msg %></pre></td>
 </tr>
 <% end %>
 </table>

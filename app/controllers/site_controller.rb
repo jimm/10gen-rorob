@@ -8,4 +8,10 @@ class SiteController < ApplicationController
 
   def help
   end
+
+  def stest
+    @count = session[:count] || 0
+    @count += 1
+    session[:count] = @count
+  end
 end
