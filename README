@@ -17,7 +17,7 @@ uses their Mongo object-oriented database.
 
         require 'xgen/rails/init'
 
-3. Create the file public/xgen_dispatch.rbcgi:
+3. Create the file public/xgen_dispatch.rb:
 
         require 'xgen/rails'
         Dispatcher.dispatch
