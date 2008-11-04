@@ -4,10 +4,11 @@
 # This could be in a helper, of course.
 def field_row(obj, field, options={})
   size = options[:size] || 40
+  name = options[:subobj] ? "#{options[:subobj]}[#{field}]" : field
   str = <<EOS
 <tr>
   <td><label for="#{field}">#{field.gsub(/_/, ' ').capitalize}</label>:</td>
-  <td><input type="text" name="#{field}" value="#{obj.instance_variable_get('@'+field)}", size=#{size}/></td>
+  <td><input type="text" name="#{name}" value="#{obj.instance_variable_get('@'+field)}", size=#{size}/></td>
 </tr>
 EOS
   str
@@ -26,10 +27,10 @@ end
   <td><label>Address</label>:</td>
   <td>
     <table>
-    <%= field_row(@student.address, 'street') %>
-    <%= field_row(@student.address, 'city') %>
-    <%= field_row(@student.address, 'state') %>
-    <%= field_row(@student.address, 'postal_code', :size => 12) %>
+    <%= field_row(@student.address, 'street', :subobj => 'address') %>
+    <%= field_row(@student.address, 'city', :subobj => 'address') %>
+    <%= field_row(@student.address, 'state', :subobj => 'address') %>
+    <%= field_row(@student.address, 'postal_code', :subobj => 'address', :size => 12) %>
     </table>
   </td>
 </tr>
