@@ -1,7 +1,7 @@
 class Score < XGen::Mongo::Base
 
   field :grade
-  has_one :for_course, :class_name => 'Course' # Mongo will store course id, not duplicate object
+  has_one :for_course, :class_name => 'Course' # Mongo will store course db reference, not duplicate object
 
   def passed?
     @grade >= 2.0
