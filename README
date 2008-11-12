@@ -13,6 +13,29 @@ uses their Mongo object-oriented database.
    This puts a copy of Rails inside your application, in the vendor/rails
    directory.
 
+   If you are on Mac OS X Leopard and see the error message "uninitialized
+   constant Gem::GemRunner" then you can try either updating RubyGems or
+   following the advice at
+   http://zhuaxia.spaces.live.com/Blog/cns!71787D3A37FFC48A!620.entry
+
+   To update gems:
+
+     sudo gem update --system
+
+   The advice:
+
+     1. Edit /usr/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/tasks/framework.rake
+        (you will need to be root or use sudo) and add one line:
+
+          require 'rubygems'
+          require 'rubygems/gem_runner'   # This is the new line
+
+     2. Delete the your_project/vendor/rails directory
+
+          rm -rf your_project/vendor/rails
+
+   Then try again.
+
 2. Create the file _init.rb in the root directory of your Rails app:
 
         require 'xgen/rails/init'

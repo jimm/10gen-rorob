@@ -8,8 +8,42 @@
 <pre>
 % rake rails:freeze:gems
 </pre>
-  This puts a copy of Rails inside your application, in the
-  <code>vendor/rails</code> directory.</li>
+  <p>This puts a copy of Rails inside your application, in the
+  <code>vendor/rails</code> directory.</p>
+
+   <p>If you are on Mac OS X Leopard and see the error message "uninitialized
+   constant Gem::GemRunner" then you can try either updating RubyGems or
+   following the advice at<br/>
+   <a href="http://zhuaxia.spaces.live.com/Blog/cns!71787D3A37FFC48A!620.entry">http://zhuaxia.spaces.live.com/Blog/cns!71787D3A37FFC48A!620.entry</a></p>
+
+   <p>To update gems:</p>
+
+<pre>
+sudo gem update --system
+</pre>
+
+   <p>The advice:</p>
+
+   <ol>
+     <li>Edit /usr/lib/ruby/gems/1.8/gems/rails-1.2.6/lib/tasks/framework.rake
+        (you will need to be root or use <code>sudo</code>) and add one line:
+
+<pre>
+require 'rubygems'
+require 'rubygems/gem_runner'   # This is the new line
+</pre>
+     </li>
+
+     <li>Delete the your_project/vendor/rails directory
+
+<pre>
+rm -rf your_project/vendor/rails
+</pre>
+     </li>
+   </ol>
+
+   <p>Then try again.</p>
+  </li>
 
   <li>Create the file <code>_init.rb</code> in the root directory of your Rails
   app:
