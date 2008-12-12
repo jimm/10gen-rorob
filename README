@@ -1,7 +1,7 @@
 = About Ruby on Rails on Babble
 
 This is a sample Rails application that runs on 10gen's Babble app server and
-uses their Mongo object-oriented database.
+uses their Mongo schema-free document database.
 
 
 = How To Babble-ify Your Rails App
