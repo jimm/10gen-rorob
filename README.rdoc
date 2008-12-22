@@ -72,8 +72,3 @@ Download the 10gen SDK (http://www.10gen.com/wiki/SDK), then see the Quick
 Start guide (http://www.10gen.com/wiki/SDK.QuickStart).
 
 Log messages are sent to the capped collection named rails_log_{RAILS_ENV}.
-
-#--
-# Local Variables:
-# mode: rdoc
-# End:
