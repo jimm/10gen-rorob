@@ -14,4 +14,8 @@ class SiteController < ApplicationController
     @count += 1
     session[:count] = @count
   end
+
+  def gemtest
+    require 'midilib'
+  end
 end
