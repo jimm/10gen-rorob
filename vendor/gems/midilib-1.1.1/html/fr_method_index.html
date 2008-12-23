@@ -1,0 +1,224 @@
+
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!--
+
+    Methods
+
+  -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Methods</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <link rel="stylesheet" href="rdoc-style.css" type="text/css" />
+  <base target="docwin" />
+</head>
+<body>
+<div id="index">
+  <h1 class="section-bar">Methods</h1>
+  <div id="index-entries">
+    <a href="classes/MIDI/Event.html#M000179"><=> (MIDI::Event)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000053">arbitrary (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/Utils.html#M000191">as_var_len (MIDI::Utils)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000057">bad_byte (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/Sequence.html#M000114">beats_per_minute (MIDI::Sequence)</a><br />
+    <a href="classes/MIDI/Sequence.html#M000115">bpm (MIDI::Sequence)</a><br />
+    <a href="classes/MIDI/Tempo.html#M000183">bpm_to_mpq (MIDI::Tempo)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000059">chan_message (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000042">chan_pressure (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/SeqReader.html#M000012">chan_pressure (MIDI::IO::SeqReader)</a><br />
+    <a href="classes/MIDI/Event.html#M000168">channel? (MIDI::Event)</a><br />
+    <a href="classes/MIDI/Event.html#M000181">channel_to_s (MIDI::Event)</a><br />
+    <a href="classes/MIDI/Measure.html#M000149">contains_event? (MIDI::Measure)</a><br />
+    <a href="classes/MIDI/IO/SeqReader.html#M000009">controller (MIDI::IO::SeqReader)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000039">controller (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/ProgramChange.html#M000101">data_as_bytes (MIDI::ProgramChange)</a><br />
+    <a href="classes/MIDI/SongSelect.html#M000132">data_as_bytes (MIDI::SongSelect)</a><br />
+    <a href="classes/MIDI/TuneRequest.html#M000127">data_as_bytes (MIDI::TuneRequest)</a><br />
+    <a href="classes/MIDI/Tempo.html#M000188">data_as_bytes (MIDI::Tempo)</a><br />
+    <a href="classes/MIDI/Controller.html#M000135">data_as_bytes (MIDI::Controller)</a><br />
+    <a href="classes/MIDI/Realtime.html#M000085">data_as_bytes (MIDI::Realtime)</a><br />
+    <a href="classes/MIDI/MetaEvent.html#M000193">data_as_bytes (MIDI::MetaEvent)</a><br />
+    <a href="classes/MIDI/Event.html#M000167">data_as_bytes (MIDI::Event)</a><br />
+    <a href="classes/MIDI/KeySig.html#M000138">data_as_bytes (MIDI::KeySig)</a><br />
+    <a href="classes/MIDI/ChannelPressure.html#M000090">data_as_bytes (MIDI::ChannelPressure)</a><br />
+    <a href="classes/MIDI/PitchBend.html#M000109">data_as_bytes (MIDI::PitchBend)</a><br />
+    <a href="classes/MIDI/NoteEvent.html#M000095">data_as_bytes (MIDI::NoteEvent)</a><br />
+    <a href="classes/MIDI/SongPointer.html#M000160">data_as_bytes (MIDI::SongPointer)</a><br />
+    <a href="classes/MIDI/TimeSig.html#M000151">data_as_bytes (MIDI::TimeSig)</a><br />
+    <a href="classes/MIDI/SystemExclusive.html#M000163">data_as_bytes (MIDI::SystemExclusive)</a><br />
+    <a href="classes/MIDI/TimeSig.html#M000154">denominator (MIDI::TimeSig)</a><br />
+    <a href="classes/MIDI/Sequence.html#M000124">each (MIDI::Sequence)</a><br />
+    <a href="classes/MIDI/Track.html#M000080">each (MIDI::Track)</a><br />
+    <a href="classes/MIDI/IO/SeqReader.html#M000004">end_track (MIDI::IO::SeqReader)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000035">end_track (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000048">eot (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000032">error (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/Sequence.html#M000125">get_measures (MIDI::Sequence)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000031">getc (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000061">handle_arbitrary (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000060">handle_sysex (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000033">header (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/SeqReader.html#M000002">header (MIDI::IO::SeqReader)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000052">key_signature (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/SeqReader.html#M000018">key_signature (MIDI::IO::SeqReader)</a><br />
+    <a href="classes/MIDI/Event.html#M000175">keysig? (MIDI::Event)</a><br />
+    <a href="classes/MIDI/Sequence.html#M000119">length_to_delta (MIDI::Sequence)</a><br />
+    <a href="classes/MIDI/KeySig.html#M000140">major_key? (MIDI::KeySig)</a><br />
+    <a href="classes/MIDI/IO/SeqReader.html#M000007">make_note_off (MIDI::IO::SeqReader)</a><br />
+    <a href="classes/MIDI/TimeSig.html#M000152">measure_duration (MIDI::TimeSig)</a><br />
+    <a href="classes/MIDI/Measures.html#M000106">measure_for_event (MIDI::Measures)</a><br />
+    <a href="classes/MIDI/Track.html#M000075">merge (MIDI::Track)</a><br />
+    <a href="classes/MIDI/Track.html#M000076">merge_event_lists (MIDI::Track)</a><br />
+    <a href="classes/MIDI/Event.html#M000172">meta? (MIDI::Event)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000058">meta_event (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000044">meta_misc (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/SeqReader.html#M000014">meta_misc (MIDI::IO::SeqReader)</a><br />
+    <a href="classes/MIDI/TimeSig.html#M000155">metronome_ticks (MIDI::TimeSig)</a><br />
+    <a href="classes/MIDI/KeySig.html#M000139">minor_key? (MIDI::KeySig)</a><br />
+    <a href="classes/MIDI/Tempo.html#M000184">mpq_to_bpm (MIDI::Tempo)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000071">msg (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000068">msg_add (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000070">msg_init (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000069">msg_read (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/Sequence.html#M000120">name (MIDI::Sequence)</a><br />
+    <a href="classes/MIDI/Track.html#M000073">name (MIDI::Track)</a><br />
+    <a href="classes/MIDI/Track.html#M000074">name= (MIDI::Track)</a><br />
+    <a href="classes/MIDI/Sequence.html#M000121">name= (MIDI::Sequence)</a><br />
+    <a href="classes/MIDI/Tempo.html#M000185">new (MIDI::Tempo)</a><br />
+    <a href="classes/MIDI/ChannelEvent.html#M000129">new (MIDI::ChannelEvent)</a><br />
+    <a href="classes/MIDI/SongSelect.html#M000131">new (MIDI::SongSelect)</a><br />
+    <a href="classes/MIDI/Track.html#M000072">new (MIDI::Track)</a><br />
+    <a href="classes/MIDI/Controller.html#M000134">new (MIDI::Controller)</a><br />
+    <a href="classes/MIDI/IO/SeqWriter.html#M000020">new (MIDI::IO::SeqWriter)</a><br />
+    <a href="classes/MIDI/KeySig.html#M000137">new (MIDI::KeySig)</a><br />
+    <a href="classes/MIDI/Event.html#M000166">new (MIDI::Event)</a><br />
+    <a href="classes/MIDI/Continue.html#M000143">new (MIDI::Continue)</a><br />
+    <a href="classes/MIDI/Clock.html#M000145">new (MIDI::Clock)</a><br />
+    <a href="classes/MIDI/Measure.html#M000147">new (MIDI::Measure)</a><br />
+    <a href="classes/MIDI/SystemCommon.html#M000165">new (MIDI::SystemCommon)</a><br />
+    <a href="classes/MIDI/SystemExclusive.html#M000162">new (MIDI::SystemExclusive)</a><br />
+    <a href="classes/MIDI/SystemReset.html#M000082">new (MIDI::SystemReset)</a><br />
+    <a href="classes/MIDI/TuneRequest.html#M000126">new (MIDI::TuneRequest)</a><br />
+    <a href="classes/MIDI/Realtime.html#M000084">new (MIDI::Realtime)</a><br />
+    <a href="classes/MIDI/TimeSig.html#M000150">new (MIDI::TimeSig)</a><br />
+    <a href="classes/MIDI/MetaEvent.html#M000192">new (MIDI::MetaEvent)</a><br />
+    <a href="classes/MIDI/NoteOffEvent.html#M000087">new (MIDI::NoteOffEvent)</a><br />
+    <a href="classes/MIDI/Sequence.html#M000112">new (MIDI::Sequence)</a><br />
+    <a href="classes/MIDI/ChannelPressure.html#M000089">new (MIDI::ChannelPressure)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000029">new (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/Marker.html#M000111">new (MIDI::Marker)</a><br />
+    <a href="classes/MIDI/NoteEvent.html#M000092">new (MIDI::NoteEvent)</a><br />
+    <a href="classes/MIDI/PolyPressure.html#M000195">new (MIDI::PolyPressure)</a><br />
+    <a href="classes/MIDI/PitchBend.html#M000108">new (MIDI::PitchBend)</a><br />
+    <a href="classes/MIDI/SongPointer.html#M000159">new (MIDI::SongPointer)</a><br />
+    <a href="classes/MIDI/Stop.html#M000096">new (MIDI::Stop)</a><br />
+    <a href="classes/MIDI/ActiveSense.html#M000157">new (MIDI::ActiveSense)</a><br />
+    <a href="classes/MIDI/Start.html#M000098">new (MIDI::Start)</a><br />
+    <a href="classes/MIDI/Measures.html#M000105">new (MIDI::Measures)</a><br />
+    <a href="classes/MIDI/NoteOnEvent.html#M000103">new (MIDI::NoteOnEvent)</a><br />
+    <a href="classes/MIDI/IO/SeqReader.html#M000001">new (MIDI::IO::SeqReader)</a><br />
+    <a href="classes/MIDI/ProgramChange.html#M000100">new (MIDI::ProgramChange)</a><br />
+    <a href="classes/MIDI/Event.html#M000169">note? (MIDI::Event)</a><br />
+    <a href="classes/MIDI/IO/SeqReader.html#M000006">note_off (MIDI::IO::SeqReader)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000037">note_off (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/Event.html#M000171">note_off? (MIDI::Event)</a><br />
+    <a href="classes/MIDI/IO/SeqReader.html#M000005">note_on (MIDI::IO::SeqReader)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000036">note_on (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/Event.html#M000170">note_on? (MIDI::Event)</a><br />
+    <a href="classes/MIDI/Sequence.html#M000117">note_to_delta (MIDI::Sequence)</a><br />
+    <a href="classes/MIDI/Sequence.html#M000118">note_to_length (MIDI::Sequence)</a><br />
+    <a href="classes/MIDI/Utils.html#M000190">note_to_s (MIDI::Utils)</a><br />
+    <a href="classes/MIDI/NoteEvent.html#M000094">note_to_s (MIDI::NoteEvent)</a><br />
+    <a href="classes/MIDI/Event.html#M000180">number_to_s (MIDI::Event)</a><br />
+    <a href="classes/MIDI/TimeSig.html#M000153">numerator (MIDI::TimeSig)</a><br />
+    <a href="classes/MIDI/NoteEvent.html#M000093">pch_oct (MIDI::NoteEvent)</a><br />
+    <a href="classes/MIDI/IO/SeqReader.html#M000010">pitch_bend (MIDI::IO::SeqReader)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000040">pitch_bend (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/SeqWriter.html#M000024">possibly_munge_due_to_running_status_byte (MIDI::IO::SeqWriter)</a><br />
+    <a href="classes/MIDI/IO/SeqReader.html#M000008">pressure (MIDI::IO::SeqReader)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000038">pressure (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/PolyPressure.html#M000196">pressure (MIDI::PolyPressure)</a><br />
+    <a href="classes/MIDI/PolyPressure.html#M000197">pressure= (MIDI::PolyPressure)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000041">program (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/SeqReader.html#M000011">program (MIDI::IO::SeqReader)</a><br />
+    <a href="classes/MIDI/Event.html#M000177">program_change? (MIDI::Event)</a><br />
+    <a href="classes/MIDI/Track.html#M000077">quantize (MIDI::Track)</a><br />
+    <a href="classes/MIDI/Event.html#M000178">quantize_to (MIDI::Event)</a><br />
+    <a href="classes/MIDI/Sequence.html#M000122">read (MIDI::Sequence)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000062">read16 (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000063">read32 (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000030">read_from (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000055">read_header (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000054">read_mt_header_string (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000056">read_track (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000064">read_var_len (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/Event.html#M000176">realtime? (MIDI::Event)</a><br />
+    <a href="classes/MIDI/Track.html#M000079">recalc_delta_from_times (MIDI::Track)</a><br />
+    <a href="classes/MIDI/Track.html#M000078">recalc_times (MIDI::Track)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000046">sequence_number (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000045">sequencer_specific (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/KeySig.html#M000141">sharpflat (MIDI::KeySig)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000050">smpte (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/Track.html#M000081">sort (MIDI::Track)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000034">start_track (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/SeqReader.html#M000003">start_track (MIDI::IO::SeqReader)</a><br />
+    <a href="classes/MIDI/IO/SeqReader.html#M000013">sysex (MIDI::IO::SeqReader)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000043">sysex (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/Event.html#M000173">system? (MIDI::Event)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000051">tempo (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/Sequence.html#M000116">tempo (MIDI::Sequence)</a><br />
+    <a href="classes/MIDI/Tempo.html#M000186">tempo (MIDI::Tempo)</a><br />
+    <a href="classes/MIDI/IO/SeqReader.html#M000017">tempo (MIDI::IO::SeqReader)</a><br />
+    <a href="classes/MIDI/Tempo.html#M000187">tempo= (MIDI::Tempo)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000047">text (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/SeqReader.html#M000015">text (MIDI::IO::SeqReader)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000049">time_signature (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/SeqReader.html#M000016">time_signature (MIDI::IO::SeqReader)</a><br />
+    <a href="classes/MIDI/Sequence.html#M000113">time_signature (MIDI::Sequence)</a><br />
+    <a href="classes/MIDI/Event.html#M000174">timesig? (MIDI::Event)</a><br />
+    <a href="classes/MIDI/Measures.html#M000107">to_mbt (MIDI::Measures)</a><br />
+    <a href="classes/MIDI/SystemExclusive.html#M000164">to_s (MIDI::SystemExclusive)</a><br />
+    <a href="classes/MIDI/ActiveSense.html#M000158">to_s (MIDI::ActiveSense)</a><br />
+    <a href="classes/MIDI/SongPointer.html#M000161">to_s (MIDI::SongPointer)</a><br />
+    <a href="classes/MIDI/TimeSig.html#M000156">to_s (MIDI::TimeSig)</a><br />
+    <a href="classes/MIDI/Measure.html#M000148">to_s (MIDI::Measure)</a><br />
+    <a href="classes/MIDI/Tempo.html#M000189">to_s (MIDI::Tempo)</a><br />
+    <a href="classes/MIDI/Clock.html#M000146">to_s (MIDI::Clock)</a><br />
+    <a href="classes/MIDI/Continue.html#M000144">to_s (MIDI::Continue)</a><br />
+    <a href="classes/MIDI/KeySig.html#M000142">to_s (MIDI::KeySig)</a><br />
+    <a href="classes/MIDI/Controller.html#M000136">to_s (MIDI::Controller)</a><br />
+    <a href="classes/MIDI/SongSelect.html#M000133">to_s (MIDI::SongSelect)</a><br />
+    <a href="classes/MIDI/ChannelEvent.html#M000130">to_s (MIDI::ChannelEvent)</a><br />
+    <a href="classes/MIDI/TuneRequest.html#M000128">to_s (MIDI::TuneRequest)</a><br />
+    <a href="classes/MIDI/MetaEvent.html#M000194">to_s (MIDI::MetaEvent)</a><br />
+    <a href="classes/MIDI/SystemReset.html#M000083">to_s (MIDI::SystemReset)</a><br />
+    <a href="classes/MIDI/Realtime.html#M000086">to_s (MIDI::Realtime)</a><br />
+    <a href="classes/MIDI/NoteOffEvent.html#M000088">to_s (MIDI::NoteOffEvent)</a><br />
+    <a href="classes/MIDI/ChannelPressure.html#M000091">to_s (MIDI::ChannelPressure)</a><br />
+    <a href="classes/MIDI/PitchBend.html#M000110">to_s (MIDI::PitchBend)</a><br />
+    <a href="classes/MIDI/Stop.html#M000097">to_s (MIDI::Stop)</a><br />
+    <a href="classes/MIDI/Event.html#M000182">to_s (MIDI::Event)</a><br />
+    <a href="classes/MIDI/Start.html#M000099">to_s (MIDI::Start)</a><br />
+    <a href="classes/MIDI/NoteOnEvent.html#M000104">to_s (MIDI::NoteOnEvent)</a><br />
+    <a href="classes/MIDI/ProgramChange.html#M000102">to_s (MIDI::ProgramChange)</a><br />
+    <a href="classes/MIDI/PolyPressure.html#M000198">to_s (MIDI::PolyPressure)</a><br />
+    <a href="classes/MIDI/IO/SeqReader.html#M000019">track_uses_channel (MIDI::IO::SeqReader)</a><br />
+    <a href="classes/MIDI/Sequence.html#M000123">write (MIDI::Sequence)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000065">write16 (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/SeqWriter.html#M000027">write16 (MIDI::IO::SeqWriter)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000066">write32 (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/SeqWriter.html#M000028">write32 (MIDI::IO::SeqWriter)</a><br />
+    <a href="classes/MIDI/IO/SeqWriter.html#M000022">write_header (MIDI::IO::SeqWriter)</a><br />
+    <a href="classes/MIDI/IO/SeqWriter.html#M000025">write_instrument (MIDI::IO::SeqWriter)</a><br />
+    <a href="classes/MIDI/IO/SeqWriter.html#M000021">write_to (MIDI::IO::SeqWriter)</a><br />
+    <a href="classes/MIDI/IO/SeqWriter.html#M000023">write_track (MIDI::IO::SeqWriter)</a><br />
+    <a href="classes/MIDI/IO/MIDIFile.html#M000067">write_var_len (MIDI::IO::MIDIFile)</a><br />
+    <a href="classes/MIDI/IO/SeqWriter.html#M000026">write_var_len (MIDI::IO::SeqWriter)</a><br />
+  </div>
+</div>
+</body>
+</html>
