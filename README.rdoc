@@ -9,3 +9,11 @@ uses their Mongo schema-free document database.
 See the _Rails_ section of the Ruby on Babble documentation at
 http://babble-ruby-rdoc.10gen.com/ for information on how to run your Rails
 app on Babble.
+
+= Note
+
+The main branch of this project uses Rails 1.2.6 (frozen into the project).
+
+The rails222 branch of this project uses Rails 2.2.2 and also uses a frozen
+gem. You probably want to use this branch. I plan to merge all of this into
+the main branch at some point.
